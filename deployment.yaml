@@ -32,7 +32,7 @@ kind: Service
 metadata:
   name: sample-helm-cicd-demo
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8080
