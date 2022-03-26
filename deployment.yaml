@@ -13,7 +13,7 @@ spec:
         app: sample-helm-cicd-demo
     spec:
       containers:
-        - image: mydevopstechlabs.jfrog.io/mydevopstechlabs-backend-release-local/com.mydevopstechlabs.hms/demo:33
+        - image: mydevopstechlabs.jfrog.io/mydevopstechlabs-backend-release-local/com.mydevopstechlabs.hms/demo:34
           name: sample-helm-cicd-demo
           resources:
             limits:
