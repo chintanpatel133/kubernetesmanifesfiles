@@ -17,7 +17,7 @@ pipeline {
             sh "git config user.email chintanpatel671@gmail.com"
             sh "git config user.name Chintan Patel"
             sh "cat deployment.yaml"
-            sh "sed -i 's+demo.*+demo:${DOCKERTAG}+g' deployment.yaml"
+            sh "sed -i 's+mydevopstechlabs.jfrog.io/mydevopstechlabs-backend-release-local/com.mydevopstechlabs.hms/demo.*+mydevopstechlabs.jfrog.io/mydevopstechlabs-backend-release-local/com.mydevopstechlabs.hms/demo:${DOCKERTAG}+g' deployment.yaml"
             sh "cat deployment.yaml"
             sh "git add ."
             sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
