@@ -14,15 +14,15 @@ spec:
     spec:
       containers:
         - image: mydevopstechlabs.jfrog.io/mydevopstechlabs-backend-release-local/com.mydevopstechlabs.hms/demo:33
-        name: sample-helm-cicd-demo
-        resources:
+          name: sample-helm-cicd-demo
+          resources:
             limits:
               cpu: 500m
               memory: 1Gi 
             requests:
               cpu: 500m
               memory: 1Gi
-        ports:
+          ports:
             - containerPort: 8080
 ---
 apiVersion: v1
