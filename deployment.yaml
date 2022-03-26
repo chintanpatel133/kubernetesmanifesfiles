@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample-helm-cicd-demo:31
+  name: sample-helm-cicd-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sample-helm-cicd-demo:31
+      app: sample-helm-cicd-demo
   template:
     metadata:
       labels:
-        app: sample-helm-cicd-demo:31
+        app: sample-helm-cicd-demo
     spec:
       containers:
         - image: mydevopstechlabs.jfrog.io/mydevopstechlabs-backend-release-local/com.mydevopstechlabs.hms/demo:32
-        name: sample-helm-cicd-demo:31
+        name: sample-helm-cicd-demo
         resources:
             limits:
               cpu: 500m
@@ -28,11 +28,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sample-helm-cicd-demo:31
+  name: sample-helm-cicd-demo
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: sample-helm-cicd-demo:31
+    app: sample-helm-cicd-demo
